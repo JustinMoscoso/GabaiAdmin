@@ -1,0 +1,37 @@
+.auth-page {
+  min-height: 100svh;
+  display: grid;
+  place-items: center;
+  padding: 1rem;
+  background:
+    radial-gradient(circle at top, rgba(13, 110, 253, 0.14), transparent 30%),
+    linear-gradient(180deg, #f8fafc, #eef2f7);
+}
+
+.auth-card {
+  width: min(980px, 100%);
+}
+
+.admin-page {
+  min-width: 0;
+}
+
+.table-responsive {
+  overflow-x: auto;
+}
+
+.modal-backdrop-shell {
+  position: fixed;
+  inset: 0;
+  background: rgba(15, 23, 42, 0.55);
+  z-index: 1040;
+}
+
+.modal-shell {
+  z-index: 1050;
+}
+
+.field input[type="checkbox"] {
+  width: 1rem;
+  height: 1rem;
+}
