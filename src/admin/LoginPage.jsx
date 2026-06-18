@@ -10,7 +10,7 @@ function LoginPage() {
   const [submitting, setSubmitting] = useState(false);
 
   if (!loading && session?.role === "admin") {
-    return <Navigate to="/dashboard" replace />;
+    return <Navigate to="/admin/dashboard" replace />;
   }
 
   const handleLogin = async (event) => {
@@ -20,7 +20,7 @@ function LoginPage() {
 
     try {
       await signInAdmin(email.trim(), password);
-      window.location.href = "/dashboard";
+      window.location.href = "/admin/dashboard";
     } catch (authError) {
       setError(authError instanceof Error ? authError.message : "Unable to sign in.");
     } finally {

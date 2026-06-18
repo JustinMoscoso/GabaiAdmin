@@ -163,9 +163,7 @@ export function AdminAuthProvider({ children }) {
 
     bootstrap();
 
-    const {
-      data: { subscription },
-    } = supabase
+    const subscription = supabase
       ? supabase.auth.onAuthStateChange(async (_event, authSession) => {
           if (!active) {
             return;
@@ -209,8 +207,8 @@ export function AdminAuthProvider({ children }) {
             setSession(null);
             setLoading(false);
           }
-        })
-      : { subscription: null };
+        }).data.subscription
+      : null;
 
     return () => {
       active = false;

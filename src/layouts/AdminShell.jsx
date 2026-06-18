@@ -8,21 +8,21 @@ function AdminShell() {
 
   const handleLogout = async () => {
     await signOutAdmin();
-    window.location.href = "/login";
+    window.location.href = "/admin/login";
   };
 
   const closeMenu = () => setMenuOpen(false);
 
   const navItems = [
-    { to: "/dashboard", icon: "bi-grid-1x2-fill", label: "Dashboard" },
-    { to: "/parents", icon: "bi-person-badge-fill", label: "Parents" },
-    { to: "/children", icon: "bi-people-fill", label: "Children" },
-    { to: "/pairing-tokens", icon: "bi-upc-scan", label: "Pairing Tokens" },
-    { to: "/app-usage", icon: "bi-graph-up-arrow", label: "App Usage" },
-    { to: "/rules", icon: "bi-sliders", label: "Rules" },
-    { to: "/blocked-content", icon: "bi-shield-exclamation", label: "Blocked Content" },
-    { to: "/notifications", icon: "bi-bell-fill", label: "Notifications" },
-    { to: "/audit", icon: "bi-journal-text", label: "Audit Logs" },
+    { to: "/admin/dashboard", icon: "bi-grid-1x2-fill", label: "Dashboard" },
+    { to: "/admin/parents", icon: "bi-person-badge-fill", label: "Parents" },
+    { to: "/admin/children", icon: "bi-people-fill", label: "Children" },
+    { to: "/admin/pairing-tokens", icon: "bi-upc-scan", label: "Pairing Tokens" },
+    { to: "/admin/app-usage", icon: "bi-graph-up-arrow", label: "App Usage" },
+    { to: "/admin/rules", icon: "bi-sliders", label: "Rules" },
+    { to: "/admin/blocked-content", icon: "bi-shield-exclamation", label: "Blocked Content" },
+    { to: "/admin/notifications", icon: "bi-bell-fill", label: "Notifications" },
+    { to: "/admin/audit", icon: "bi-journal-text", label: "Audit Logs" },
   ];
 
   return (
