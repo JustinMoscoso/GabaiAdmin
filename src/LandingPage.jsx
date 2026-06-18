@@ -1,4 +1,8 @@
 function LandingPage() {
+  const apkDownloadHref = window.location.pathname.startsWith("/GabaiAdmin")
+    ? "/GabaiAdmin/app-release.apk"
+    : "/app-release.apk";
+
   return (
     <div className="landing-page">
       <nav className="landing-navbar navbar navbar-expand-lg navbar-dark py-3">
@@ -22,7 +26,11 @@ function LandingPage() {
                   protect your children using the Gabai parental control system.
                 </p>
                 <div className="d-flex gap-3 flex-wrap mt-4">
-                  <a href="#downloads" className="btn btn-light btn-lg landing-download-btn">
+                  <a
+                    href={apkDownloadHref}
+                    className="btn btn-light btn-lg landing-download-btn"
+                    download="Gabai.apk"
+                  >
                     Download App
                   </a>
                   <a href="#features" className="btn btn-outline-light btn-lg landing-download-btn">
@@ -113,7 +121,11 @@ function LandingPage() {
                   </div>
 
                   <div className="d-grid">
-                    <a href="#downloads" className="btn btn-primary btn-lg landing-download-btn">
+                    <a
+                      href={apkDownloadHref}
+                      className="btn btn-primary btn-lg landing-download-btn"
+                      download="Gabai.apk"
+                    >
                       <i className="bi bi-google-play" /> Download Gabai APK
                     </a>
                   </div>
